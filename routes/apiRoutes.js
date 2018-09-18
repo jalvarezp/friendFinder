@@ -4,11 +4,11 @@ var tableData = require("../data/friends");
 
 module.exports = function (app) {
 
-  app.get("/api/friends", function (req, res) {
+  app.get("/data/friends", function (req, res) {
     res.json(tableData);
   });
 
-  app.post("/api/friends", function (req, res) {
+  app.post("/data/friends", function (req, res) {
     var match = 0;
     var difference = 0;
     console.log(parseInt(Math.abs(parseInt(tableData[1].scores[0]) - parseInt(req.body.scores[0]))));
@@ -47,7 +47,7 @@ module.exports = function (app) {
 
   });
 
-  app.post("/api/clear", function () {
+  app.post("/data/friends", function () {
     tableData = [];
 
     console.log(tableData);
