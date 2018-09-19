@@ -36,14 +36,14 @@ module.exports = function (app) {
       }
     }
 
-    var prueba = {
+    var test = {
       name: tableData[match].name,
       photo: tableData[match].photo
     };
     tableData.push(req.body);
 
-    console.log(prueba);
-    res.json(prueba);
+    console.log(test);
+    res.json(test);
 
   });
 
